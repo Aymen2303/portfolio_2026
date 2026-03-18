@@ -4,237 +4,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Aimen Lalaibia | Software Engineer</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Aimen Lalaibia · software engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="grain"></div>
 
-    <nav class="container">
-
-        <strong>Aimen</strong>
-
-        <div>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#contact">Contact</a>
-            <span class="theme" onclick="toggleTheme()">🌙</span>
+    <nav>
+        <div class="nav-inner">
+            <span class="logo">AIMEN L.</span>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#experience">Exp</a>
+                <a href="#projects">Work</a>
+                <a href="#skills">Stack</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+                <span class="theme" onclick="toggleTheme()" id="theme-toggle">🌙</span>
+            </div>
         </div>
-
     </nav>
 
-
+    <!-- Hero with fade-up -->
     <section class="hero container">
-
-        <h1>Aimen Lalaibia</h1>
-
-        <p>Software Engineer · Mobile & Full-Stack Developer</p>
-
-        <a class="btn" href="mailto:aimenlalaibia0@gmail.com">Contact Me</a>
-
-        <a class="btn" href="https://github.com/Aymen2303" target="_blank">GitHub</a>
-
-        <a class="btn" href="https://www.linkedin.com/in/lalaibia-aimen-a2380624a/" target="_blank">LinkedIn</a>
-
+        <h1 class="fade-up appear">Aimen Lalaibia</h1>
+        <!-- appear immediate -->
+        <div class="hero-tagline fade-up appear delay-1">Software engineer · mobile & full-stack</div>
+        <p class="fade-up appear delay-2" style="max-width: 600px; margin: 0 auto 32px; color: var(--text-light); font-size: 1.2rem;">Master’s (top of class) · clean architecture · high‑performance apps</p>
+        <div class="btn-group fade-up appear delay-3">
+            <a class="btn" href="mailto:aimenlalaibia0@gmail.com"><i class="far fa-paper-plane"></i> Contact me</a>
+            <a class="btn btn-outline" href="https://github.com/Aymen2303" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a class="btn btn-outline" href="https://www.linkedin.com/in/lalaibia-aimen-a2380624a/" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+            <a class="btn btn-outline" href="#"><i class="far fa-file-pdf"></i> CV</a>
+        </div>
     </section>
 
-
+    <!-- About -->
     <section id="about" class="section container">
-
-        <h2>About</h2>
-
-        <p>
-            Software Engineer with a Master’s degree in Software Engineering (Top of the class). Experienced in mobile development, scalable web platforms, and clean architecture. Passionate about building high-performance applications and solving complex technical
-            problems.
-        </p>
-
-    </section>
-
-
-    <section class="section container">
-
-        <h2>Experience</h2>
-
-        <div class="grid">
-
-            <div class="card">
-                <h3>Software Engineer — Dzexpert</h3>
-                <p>
-                    Improved mobile performance reducing load times by 30%. Built features increasing user retention by 15%. Mentored developers on clean architecture.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Software Engineer — Nutri Saha</h3>
-                <p>
-                    Led redevelopment of multilingual platform. Designed scalable mobile architecture. Delivered projects under tight deadlines.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Mobile Developer Intern — Shabakett Systems</h3>
-                <p>
-                    Built features using Kotlin and Jetpack Compose. Contributed to Agile development cycles.
-                </p>
-            </div>
-
+        <div class="section-header fade-right">
+            <i class="fas fa-user-astronaut"></i>
+            <h2>About</h2>
         </div>
-
+        <div class="card fade-up" style="padding: 40px; border-radius: 40px;">
+            <p style="font-size: 1.3rem; font-weight: 300; max-width: 900px;">
+                Software Engineer with a Master’s in Software Engineering <strong>(valedictorian)</strong>. Experienced in mobile development (Kotlin, Flutter), scalable web platforms, and clean architecture. I turn complex problems into fast, intuitive
+                digital products.
+            </p>
+        </div>
     </section>
 
+    <!-- Experience -->
+    <section id="experience" class="section container">
+        <div class="section-header fade-right">
+            <i class="fas fa-briefcase"></i>
+            <h2>Experience</h2>
+        </div>
+        <div class="grid">
+            <div class="card fade-up">
+                <h3>Software Engineer · Dzexpert</h3>
+                <p>Improved mobile performance — 30% faster load, new features boosted engagement. Mentored devs in clean architecture.</p>
+                <div class="card-meta"><i class="fas fa-rocket"></i> 2024–present</div>
+            </div>
+            <div class="card fade-up delay-1">
+                <h3>Software Engineer · Nutri Saha</h3>
+                <p>Led front‑end of multilingual platform (4 languages), applied HCI/UX principles, delivered under tight deadlines.</p>
+                <div class="card-meta"><i class="fas fa-globe"></i> 2023–2024</div>
+            </div>
+            <div class="card fade-up delay-2">
+                <h3>Mobile Dev Intern · Shabakett Systems</h3>
+                <p>Kotlin & Jetpack Compose, Agile sprints, technical documentation & feature prototyping.</p>
+                <div class="card-meta"><i class="fas fa-code"></i> 2022</div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Projects -->
     <section id="projects" class="section container">
-
-        <h2>Projects</h2>
-
+        <div class="section-header fade-left">
+            <i class="fas fa-laptop-code"></i>
+            <h2>Projects</h2>
+        </div>
         <div class="grid">
-
-            <div class="card">
-
+            <div class="card fade-up">
                 <h3>Nutri Saha Platform</h3>
-
-                <p>
-                    Responsive multilingual platform focused on accessibility and UX.
-                </p>
-
-                <p><strong>Tech:</strong> HTML, CSS, JavaScript</p>
-
+                <p>Multilingual, accessible UX — fully responsive.</p>
+                <div class="card-meta"><i class="fab fa-js"></i> HTML/CSS/JS</div>
             </div>
-
-            <div class="card">
-
+            <div class="card fade-up delay-1">
                 <h3>Home Service App</h3>
-
-                <p>
-                    Mobile service booking application with API integration and modern UI architecture.
-                </p>
-
-                <p><strong>Tech:</strong> Kotlin, Jetpack Compose, MVVM</p>
-
+                <p>Booking with MVVM, API integration, offline support.</p>
+                <div class="card-meta"><i class="fab fa-android"></i> Kotlin · Compose</div>
             </div>
-
-            <div class="card">
-
-                <h3>Professional Work</h3>
-
-                <p>
-                    Worked on enterprise and confidential software systems involving complex business logic. Details available upon request.
-                </p>
-
+            <div class="card fade-up delay-2">
+                <h3>Enterprise systems</h3>
+                <p>Confidential large‑scale business logic & dashboards.</p>
+                <div class="card-meta"><i class="fas fa-lock"></i> NDA</div>
             </div>
-
         </div>
-
     </section>
 
-
+    <!-- Skills with icons (tech stack) -->
     <section id="skills" class="section container">
-
-        <h2>Skills</h2>
-
-        <div class="skills">
-
-            <span>Kotlin</span>
-            <span>Dart</span>
-            <span>JavaScript</span>
-            <span>PHP</span>
-            <span>SQL</span>
-            <span>Jetpack Compose</span>
-            <span>Flutter</span>
-            <span>Node.js</span>
-            <span>Express</span>
-            <span>Git</span>
-            <span>Postman</span>
-            <span>Figma</span>
-            <span>Clean Architecture</span>
-            <span>MVVM</span>
-
+        <div class="section-header fade-right">
+            <i class="fas fa-cog"></i>
+            <h2>Tech stack</h2>
         </div>
-
+        <div class="skills-cloud">
+            <span class="skill-chip"><i class="fab fa-android"></i> Kotlin</span>
+            <span class="skill-chip"><i class="fab fa-dart"></i> Dart</span>
+            <span class="skill-chip"><i class="fab fa-js"></i> JavaScript</span>
+            <span class="skill-chip"><i class="fab fa-php"></i> PHP</span>
+            <span class="skill-chip"><i class="fas fa-database"></i> SQL</span>
+            <span class="skill-chip"><i class="fas fa-mobile-alt"></i> Jetpack Compose</span>
+            <span class="skill-chip"><i class="fab fa-flutter"></i> Flutter</span>
+            <span class="skill-chip"><i class="fab fa-node"></i> Node.js</span>
+            <span class="skill-chip"><i class="fas fa-code"></i> Express</span>
+            <span class="skill-chip"><i class="fab fa-git-alt"></i> Git</span>
+            <span class="skill-chip"><i class="fab fa-figma"></i> Figma</span>
+            <span class="skill-chip"><i class="fas fa-layer-group"></i> Clean Arch</span>
+            <span class="skill-chip"><i class="fas fa-project-diagram"></i> MVVM</span>
+            <span class="skill-chip"><i class="fas fa-fire"></i> Firebase</span>
+            <span class="skill-chip"><i class="fas fa-cloud"></i> REST/GraphQL</span>
+            <span class="skill-chip"><i class="fab fa-js"></i> TypeScript</span>
+            <span class="skill-chip"><i class="fab fa-python"></i> Python</span>
+        </div>
     </section>
 
-
-    <section id="pricing" class="section container pricing">
-
-        <h2>Services & Pricing</h2>
-
+    <!-- SERVICES & PRICING (updated with mobile apps, skeleton websites, Figma) -->
+    <section id="pricing" class="section container">
+        <div class="section-header fade-left">
+            <i class="fas fa-tags"></i>
+            <h2>Services & pricing</h2>
+        </div>
         <div class="grid">
-
-            <div class="card">
-
-                <h3>Basic</h3>
-
-                <div class="price">30k – 40k DZD</div>
-
-                <p>
-                    Landing page or small website.<br> Responsive design.<br> Contact form integration.
-                </p>
-
+            <!-- Basic: skeleton / mobile lite -->
+            <div class="card fade-up">
+                <h3>Essential · skeleton</h3>
+                <div class="price-tag">25k–40k <span class="price-small">DZD</span></div>
+                <ul class="feature-list">
+                    <li><i class="fas fa-mobile-alt"></i> Mobile skeleton (1-2 screens)</li>
+                    <li><i class="fas fa-globe"></i> Landing page / web skeleton</li>
+                    <li><i class="fas fa-paint-brush"></i> Basic Figma wireframes</li>
+                    <li><i class="fas fa-envelope"></i> Contact form</li>
+                </ul>
             </div>
-
-            <div class="card">
-
-                <h3>Standard</h3>
-
-                <div class="price">45k – 70k DZD</div>
-
-                <p>
-                    Multi-page website.<br> Custom UI.<br> Forms and interactive components.
-                </p>
-
+            <!-- Standard: mobile + web + figma -->
+            <div class="card fade-up delay-1">
+                <h3>Standard · app + design</h3>
+                <div class="price-tag">50k–80k <span class="price-small">DZD</span></div>
+                <ul class="feature-list">
+                    <li><i class="fas fa-mobile-alt"></i> Mobile app (up to 5 screens)</li>
+                    <li><i class="fas fa-laptop"></i> Multi‑page website</li>
+                    <li><i class="fab fa-figma"></i> Full Figma design (mobile + web)</li>
+                    <li><i class="fas fa-puzzle-piece"></i> API integration ready</li>
+                </ul>
             </div>
-
-            <div class="card">
-
-                <h3>Premium</h3>
-
-                <div class="price">80k – 120k+ DZD</div>
-
-                <p>
-                    Complex web applications.<br> Dashboards and dynamic content.<br> API integrations and optimization.
-                </p>
-
+            <!-- Premium: mobile + advanced design + figma interactive -->
+            <div class="card fade-up delay-2">
+                <h3>Premium · full‑cycle</h3>
+                <div class="price-tag">85k–130k+ <span class="price-small">DZD</span></div>
+                <ul class="feature-list">
+                    <li><i class="fas fa-mobile-alt"></i> Full mobile app (iOS/Android)</li>
+                    <li><i class="fas fa-dashboard"></i> Web dashboard + backend</li>
+                    <li><i class="fab fa-figma"></i> Interactive Figma prototype</li>
+                    <li><i class="fas fa-cloud-upload-alt"></i> Complex API & custom features</li>
+                    <li><i class="fas fa-draw-polygon"></i> Skeleton to production</li>
+                </ul>
             </div>
-
         </div>
-
+        <p style="text-align: center; margin-top: 28px; opacity: 0.7;">* Prices are indicative — mobile & Figma included in all plans.</p>
     </section>
 
-
+    <!-- Contact -->
     <section id="contact" class="section container">
-
-        <h2>Contact</h2>
-
-        <p>If you'd like to work together or discuss a project:</p>
-
-        <br>
-
-        <a class="btn" href="mailto:aimenlalaibia0@gmail.com">Send Email</a>
-
+        <div class="contact-card fade-up">
+            <i class="fas fa-envelope-open-text" style="font-size: 3rem; color: var(--accent); margin-bottom: 10px;"></i>
+            <h2 style="font-size: 2.5rem; margin-bottom: 8px;">Let's talk</h2>
+            <p style="margin-bottom: 32px; font-size: 1.2rem;">collaborate · build · innovate</p>
+            <a class="btn" href="mailto:aimenlalaibia0@gmail.com" style="font-size: 1.3rem; padding: 18px 42px;"><i class="far fa-envelope"></i> aimenlalaibia0@gmail.com</a>
+            <div style="margin-top: 30px; display: flex; gap: 20px; justify-content: center; font-size: 1.8rem; color: var(--accent);">
+                <a href="https://github.com/Aymen2303" style="color: var(--text-light);"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/lalaibia-aimen-a2380624a/" style="color: var(--text-light);"><i class="fab fa-linkedin"></i></a>
+                <a href="#" style="color: var(--text-light);"><i class="fab fa-x-twitter"></i></a>
+            </div>
+        </div>
     </section>
 
-
-    <footer class="container">
-
-        <p>
-            © 2026 Aimen Lalaibia
-        </p>
-
+    <footer>
+        <p>© 2026 Aimen Lalaibia — built with <i class="fas fa-meteor" style="color: var(--accent);"></i> & modern CSS</p>
+        <p style="margin-top: 8px;"><span class="theme" onclick="toggleTheme()" style="background: transparent; padding: 4px 12px;">🌙 toggle dark/light</span></p>
     </footer>
 
-
+    <!-- Animation on scroll -->
     <script>
         function toggleTheme() {
-
-            document.body.classList.toggle("dark")
-
+            document.body.classList.toggle('dark');
+            const toggleBtn = document.getElementById('theme-toggle');
+            toggleBtn.innerHTML = document.body.classList.contains('dark') ? '☀️' : '🌙';
         }
-    </script>
 
+        // Intersection Observer for slide/fade animations
+        const faders = document.querySelectorAll('.fade-up, .fade-right, .fade-left');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('appear');
+                    // optional: unobserve after appearing
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.2,
+            rootMargin: '0px 0px -30px 0px'
+        });
+
+        faders.forEach(el => observer.observe(el));
+
+        // ensure hero already visible (they have .appear forced, but also for safety)
+        document.querySelectorAll('.hero .fade-up').forEach(el => el.classList.add('appear'));
+    </script>
 </body>
 
 </html>
