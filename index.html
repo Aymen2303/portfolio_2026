@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aimen Lalaibia · software engineer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Aimen Lalaibia · software engineer | multilingual portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,31 +17,56 @@
     <div class="grain"></div>
 
     <nav>
-        <div class="nav-inner">
-            <span class="logo">AIMEN L.</span>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#experience">Exp</a>
-                <a href="#projects">Work</a>
-                <a href="#skills">Stack</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#contact">Contact</a>
-                <span class="theme" onclick="toggleTheme()" id="theme-toggle">🌙</span>
+        <nav>
+            <div class="nav-inner">
+                <span class="logo">AIMEN L.</span>
+                <div class="nav-links" id="nav-links">
+                    <a href="#about" data-key="nav_about">About</a>
+                    <a href="#experience" data-key="nav_exp">Exp</a>
+                    <a href="#projects" data-key="nav_work">Work</a>
+                    <a href="#skills" data-key="nav_stack">Stack</a>
+                    <a href="#pricing" data-key="nav_pricing">Pricing</a>
+                    <a href="#contact" data-key="nav_contact">Contact</a>
+
+                    <!-- Language Dropdown with Flags -->
+                    <div class="lang-dropdown">
+                        <button class="lang-dropbtn" id="langDropdownBtn">
+                    <span class="current-flag">🇬🇧</span>
+                    <span class="current-lang">EN</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                        <div class="lang-dropdown-content" id="langDropdownContent">
+                            <a href="#" data-lang="en" class="lang-option">
+                                <span class="flag-icon">🇬🇧</span>
+                                <span>English</span>
+                            </a>
+                            <a href="#" data-lang="fr" class="lang-option">
+                                <span class="flag-icon">🇫🇷</span>
+                                <span>Français</span>
+                            </a>
+                            <a href="#" data-lang="ar" class="lang-option">
+                                <span class="flag-icon">🇸🇦</span>
+                                <span>العربية</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <span class="theme" onclick="toggleTheme()" id="theme-toggle">🌙</span>
+                </div>
             </div>
-        </div>
+        </nav>
     </nav>
 
-    <!-- Hero with fade-up -->
+    <!-- Hero Section -->
     <section class="hero container">
-        <h1 class="fade-up appear">Aimen Lalaibia</h1>
-        <!-- appear immediate -->
-        <div class="hero-tagline fade-up appear delay-1">Software engineer · mobile & full-stack</div>
-        <p class="fade-up appear delay-2" style="max-width: 600px; margin: 0 auto 32px; color: var(--text-light); font-size: 1.2rem;">clean architecture · high-performance apps</p>
+        <h1 class="fade-up appear" data-key="hero_name">Aimen Lalaibia</h1>
+        <div class="hero-tagline fade-up appear delay-1" data-key="hero_tagline">Software engineer · mobile & full-stack</div>
+        <p class="fade-up appear delay-2" style="max-width: 600px; margin: 0 auto 32px; color: var(--text-light); font-size: 1.2rem;" data-key="hero_desc">clean architecture · high-performance apps</p>
         <div class="btn-group fade-up appear delay-3">
-            <a class="btn" href="mailto:aimenlalaibia0@gmail.com"><i class="far fa-paper-plane"></i> Contact me</a>
+            <a class="btn" href="mailto:aimenlalaibia0@gmail.com"><i class="far fa-paper-plane"></i> <span data-key="btn_contact">Contact me</span></a>
             <a class="btn btn-outline" href="https://github.com/Aymen2303" target="_blank"><i class="fab fa-github"></i> GitHub</a>
             <a class="btn btn-outline" href="https://www.linkedin.com/in/lalaibia-aimen-a2380624a/" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
-            <a class="btn btn-outline" href="cv.pdf" target="_blank" download="LalaibiaAimen_resumé"><i class="far fa-file-pdf"></i> CV</a>
+            <a class="btn btn-outline" href="cv.pdf" target="_blank" download="LalaibiaAimen_resumé"><i class="far fa-file-pdf"></i> <span data-key="btn_cv">CV</span></a>
         </div>
     </section>
 
@@ -48,10 +74,10 @@
     <section id="about" class="section container">
         <div class="section-header fade-right">
             <i class="fas fa-user-astronaut"></i>
-            <h2>About</h2>
+            <h2 data-key="about_title">About</h2>
         </div>
         <div class="card fade-up" style="padding: 40px; border-radius: 40px;">
-            <p style="font-size: 1.3rem; font-weight: 300; max-width: 900px;">
+            <p style="font-size: 1.3rem; font-weight: 300; max-width: 900px;" data-key="about_text">
                 Software Engineer with a Master’s in Software Engineering <strong>(valedictorian)</strong>. Experienced in mobile development (Kotlin, Flutter), scalable web platforms, and clean architecture. I turn complex problems into fast, intuitive
                 digital products.
             </p>
@@ -62,23 +88,23 @@
     <section id="experience" class="section container">
         <div class="section-header fade-right">
             <i class="fas fa-briefcase"></i>
-            <h2>Experience</h2>
+            <h2 data-key="exp_title">Experience</h2>
         </div>
         <div class="grid">
             <div class="card fade-up">
-                <h3>Software Engineer · Dzexpert</h3>
-                <p>Improved mobile performance — 30% faster load, new features boosted engagement. Mentored devs in clean architecture.</p>
-                <div class="card-meta"><i class="fas fa-rocket"></i> 2024–present</div>
+                <h3 data-key="exp1_title">Software Engineer · Dzexpert</h3>
+                <p data-key="exp1_desc">Improved mobile performance — 30% faster load, new features boosted engagement.</p>
+                <div class="card-meta"><i class="fas fa-rocket"></i> <span data-key="exp1_date">2025–2026</span></div>
             </div>
             <div class="card fade-up delay-1">
-                <h3>Software Engineer · Nutri Saha</h3>
-                <p>Led front‑end of multilingual platform (4 languages), applied HCI/UX principles, delivered under tight deadlines.</p>
-                <div class="card-meta"><i class="fas fa-globe"></i> 2023–2024</div>
+                <h3 data-key="exp2_title">Software Engineer · Nutri Saha</h3>
+                <p data-key="exp2_desc">Led front‑end of multilingual platform (4 languages), applied HCI/UX principles, delivered under tight deadlines.</p>
+                <div class="card-meta"><i class="fas fa-globe"></i> <span data-key="exp2_date">2023–2024</span></div>
             </div>
             <div class="card fade-up delay-2">
-                <h3>Mobile Dev Intern · Shabakett Systems</h3>
-                <p>Kotlin & Jetpack Compose, Agile sprints, technical documentation & feature prototyping.</p>
-                <div class="card-meta"><i class="fas fa-code"></i> 2022</div>
+                <h3 data-key="exp3_title">Mobile Dev Intern · Shabakett Systems</h3>
+                <p data-key="exp3_desc">Kotlin & Jetpack Compose, Agile sprints, technical documentation & feature prototyping.</p>
+                <div class="card-meta"><i class="fas fa-code"></i> <span data-key="exp3_date">2022</span></div>
             </div>
         </div>
     </section>
@@ -87,32 +113,32 @@
     <section id="projects" class="section container">
         <div class="section-header fade-left">
             <i class="fas fa-laptop-code"></i>
-            <h2>Projects</h2>
+            <h2 data-key="projects_title">Projects</h2>
         </div>
         <div class="grid">
             <div class="card fade-up">
-                <h3>Nutri Saha Platform</h3>
-                <p>Multilingual, accessible UX — fully responsive.</p>
+                <h3 data-key="proj1_title">Nutri Saha Platform</h3>
+                <p data-key="proj1_desc">Multilingual, accessible UX — fully responsive.</p>
                 <div class="card-meta"><i class="fab fa-js"></i> HTML/CSS/JS</div>
             </div>
             <div class="card fade-up delay-1">
-                <h3>Home Service App</h3>
-                <p>Booking with MVVM, API integration, offline support.</p>
+                <h3 data-key="proj2_title">Home Service App</h3>
+                <p data-key="proj2_desc">Booking with MVVM, API integration, offline support.</p>
                 <div class="card-meta"><i class="fab fa-android"></i> Kotlin · Compose</div>
             </div>
             <div class="card fade-up delay-2">
-                <h3>Enterprise systems</h3>
-                <p>Confidential large‑scale business logic & dashboards.</p>
+                <h3 data-key="proj3_title">Enterprise systems</h3>
+                <p data-key="proj3_desc">Confidential large‑scale business logic & dashboards.</p>
                 <div class="card-meta"><i class="fas fa-lock"></i> NDA</div>
             </div>
         </div>
     </section>
 
-    <!-- Skills with icons (tech stack) -->
+    <!-- Skills with icons -->
     <section id="skills" class="section container">
         <div class="section-header fade-right">
             <i class="fas fa-cog"></i>
-            <h2>Tech stack</h2>
+            <h2 data-key="skills_title">Tech stack</h2>
         </div>
         <div class="skills-cloud">
             <span class="skill-chip"><i class="fab fa-android"></i> Kotlin</span>
@@ -135,57 +161,54 @@
         </div>
     </section>
 
-    <!-- SERVICES & PRICING (updated with mobile apps, skeleton websites, Figma) -->
+    <!-- PRICING (multilingual texts) -->
     <section id="pricing" class="section container">
         <div class="section-header fade-left">
             <i class="fas fa-tags"></i>
-            <h2>Services & pricing</h2>
+            <h2 data-key="pricing_title">Services & pricing</h2>
         </div>
         <div class="grid">
-            <!-- Basic: skeleton / mobile lite -->
             <div class="card fade-up">
-                <h3>Essential · skeleton</h3>
+                <h3 data-key="price1_title">Essential · skeleton</h3>
                 <div class="price-tag">25k–40k <span class="price-small">DZD</span></div>
                 <ul class="feature-list">
-                    <li><i class="fas fa-mobile-alt"></i> Mobile skeleton (1-2 screens)</li>
-                    <li><i class="fas fa-globe"></i> Landing page / web skeleton</li>
-                    <li><i class="fas fa-paint-brush"></i> Basic Figma wireframes</li>
-                    <li><i class="fas fa-envelope"></i> Contact form</li>
+                    <li><i class="fas fa-mobile-alt"></i> <span data-key="price1_feat1">Mobile skeleton (1-2 screens)</span></li>
+                    <li><i class="fas fa-globe"></i> <span data-key="price1_feat2">Landing page / web skeleton</span></li>
+                    <li><i class="fas fa-paint-brush"></i> <span data-key="price1_feat3">Basic Figma wireframes</span></li>
+                    <li><i class="fas fa-envelope"></i> <span data-key="price1_feat4">Contact form</span></li>
                 </ul>
             </div>
-            <!-- Standard: mobile + web + figma -->
             <div class="card fade-up delay-1">
-                <h3>Standard · app + design</h3>
+                <h3 data-key="price2_title">Standard · app + design</h3>
                 <div class="price-tag">50k–80k <span class="price-small">DZD</span></div>
                 <ul class="feature-list">
-                    <li><i class="fas fa-mobile-alt"></i> Mobile app (up to 5 screens)</li>
-                    <li><i class="fas fa-laptop"></i> Multi‑page website</li>
-                    <li><i class="fab fa-figma"></i> Full Figma design (mobile + web)</li>
-                    <li><i class="fas fa-puzzle-piece"></i> API integration ready</li>
+                    <li><i class="fas fa-mobile-alt"></i> <span data-key="price2_feat1">Mobile app (up to 5 screens)</span></li>
+                    <li><i class="fas fa-laptop"></i> <span data-key="price2_feat2">Multi‑page website</span></li>
+                    <li><i class="fab fa-figma"></i> <span data-key="price2_feat3">Full Figma design (mobile + web)</span></li>
+                    <li><i class="fas fa-puzzle-piece"></i> <span data-key="price2_feat4">API integration ready</span></li>
                 </ul>
             </div>
-            <!-- Premium: mobile + advanced design + figma interactive -->
             <div class="card fade-up delay-2">
-                <h3>Premium · full-cycle</h3>
+                <h3 data-key="price3_title">Premium · full-cycle</h3>
                 <div class="price-tag">85k-130k+ <span class="price-small">DZD</span></div>
                 <ul class="feature-list">
-                    <li><i class="fas fa-mobile-alt"></i> Full mobile app (iOS/Android)</li>
-                    <li><i class="fas fa-dashboard"></i> Web dashboard + backend</li>
-                    <li><i class="fab fa-figma"></i> Interactive Figma prototype</li>
-                    <li><i class="fas fa-cloud-upload-alt"></i> Complex API & custom features</li>
-                    <li><i class="fas fa-draw-polygon"></i> Skeleton to production</li>
+                    <li><i class="fas fa-mobile-alt"></i> <span data-key="price3_feat1">Full mobile app (iOS/Android)</span></li>
+                    <li><i class="fas fa-dashboard"></i> <span data-key="price3_feat2">Web dashboard + backend</span></li>
+                    <li><i class="fab fa-figma"></i> <span data-key="price3_feat3">Interactive Figma prototype</span></li>
+                    <li><i class="fas fa-cloud-upload-alt"></i> <span data-key="price3_feat4">Complex API & custom features</span></li>
+                    <li><i class="fas fa-draw-polygon"></i> <span data-key="price3_feat5">Skeleton to production</span></li>
                 </ul>
             </div>
         </div>
-        <p style="text-align: center; margin-top: 28px; opacity: 0.7;">* Figma included only in Standard and Premium plans.</p>
+        <p style="text-align: center; margin-top: 28px; opacity: 0.7;" data-key="pricing_note">* Figma included only in Standard and Premium plans.</p>
     </section>
 
     <!-- Contact -->
     <section id="contact" class="section container">
         <div class="contact-card fade-up">
             <i class="fas fa-envelope-open-text" style="font-size: 3rem; color: var(--accent); margin-bottom: 10px;"></i>
-            <h2 style="font-size: 2.5rem; margin-bottom: 8px;">Let's talk</h2>
-            <p style="margin-bottom: 32px; font-size: 1.2rem;">collaborate · build · innovate</p>
+            <h2 style="font-size: 2.5rem; margin-bottom: 8px;" data-key="contact_title">Let's talk</h2>
+            <p style="margin-bottom: 32px; font-size: 1.2rem;" data-key="contact_sub">collaborate · build · innovate</p>
             <a class="btn" href="mailto:aimenlalaibia0@gmail.com" style="font-size: 1.3rem; padding: 18px 42px;"><i class="far fa-envelope"></i> aimenlalaibia0@gmail.com</a>
             <div style="margin-top: 30px; display: flex; gap: 20px; justify-content: center; font-size: 1.8rem; color: var(--accent);">
                 <a href="https://github.com/Aymen2303" style="color: var(--text-light);"><i class="fab fa-github"></i></a>
@@ -196,25 +219,286 @@
     </section>
 
     <footer>
-        <p>© 2026 Aimen Lalaibia — built with <i class="fas fa-meteor" style="color: var(--accent);"></i> & modern CSS</p>
-        <p style="margin-top: 8px;"><span class="theme" onclick="toggleTheme()" style="background: transparent; padding: 4px 12px;">🌙 toggle dark/light</span></p>
+        <p>© 2026 Aimen Lalaibia — <span data-key="footer_text">built with</span> <i class="fas fa-meteor" style="color: var(--accent);"></i> & modern CSS</p>
+        <p style="margin-top: 8px;"><span class="theme" onclick="toggleTheme()" style="background: transparent; padding: 4px 12px; display: inline-block;">🌙 <span data-key="toggle_theme">toggle dark/light</span></span>
+        </p>
     </footer>
 
-    <!-- Animation on scroll -->
     <script>
+        const translations = {
+            en: {
+                nav_about: "About",
+                nav_exp: "Exp",
+                nav_work: "Work",
+                nav_stack: "Stack",
+                nav_pricing: "Pricing",
+                nav_contact: "Contact",
+                btn_contact: "Contact me",
+                btn_cv: "CV",
+                hero_name: "Aimen Lalaibia",
+                hero_tagline: "Software engineer · mobile & full-stack",
+                hero_desc: "clean architecture · high-performance apps",
+                about_title: "About",
+                about_text: "Software Engineer with a Master’s in Software Engineering <strong>(valedictorian)</strong>. Experienced in mobile development (Kotlin, Flutter), scalable web platforms, and clean architecture. I turn complex problems into fast, intuitive digital products.",
+                exp_title: "Experience",
+                exp1_title: "Software Engineer · Dzexpert",
+                exp1_desc: "Improved mobile performance — 30% faster load, new features boosted engagement.",
+                exp1_date: "2025-2026",
+                exp2_title: "Software Engineer · Nutri Saha",
+                exp2_desc: "Led front‑end of multilingual platform (4 languages), applied HCI/UX principles, delivered under tight deadlines.",
+                exp2_date: "2025",
+                exp3_title: "Mobile Dev Intern · Shabakett Systems",
+                exp3_desc: "Kotlin & Jetpack Compose, Agile sprints, technical documentation & feature prototyping.",
+                exp3_date: "2024",
+                projects_title: "Projects",
+                proj1_title: "Nutri Saha Platform",
+                proj1_desc: "Multilingual, accessible UX — fully responsive.",
+                proj2_title: "Home Service App",
+                proj2_desc: "Booking with MVVM, API integration, offline support.",
+                proj3_title: "Enterprise systems",
+                proj3_desc: "Confidential large‑scale business logic & dashboards.",
+                skills_title: "Tech stack",
+                pricing_title: "Services & pricing",
+                price1_title: "Essential · skeleton",
+                price1_feat1: "Mobile skeleton (1-2 screens)",
+                price1_feat2: "Landing page / web skeleton",
+                price1_feat3: "Basic Figma wireframes",
+                price1_feat4: "Contact form",
+                price2_title: "Standard · app + design",
+                price2_feat1: "Mobile app (up to 5 screens)",
+                price2_feat2: "Multi‑page website",
+                price2_feat3: "Full Figma design (mobile + web)",
+                price2_feat4: "API integration ready",
+                price3_title: "Premium · full-cycle",
+                price3_feat1: "Full mobile app (iOS/Android)",
+                price3_feat2: "Web dashboard + backend",
+                price3_feat3: "Interactive Figma prototype",
+                price3_feat4: "Complex API & custom features",
+                price3_feat5: "Skeleton to production",
+                pricing_note: "* Figma included only in Standard and Premium plans.",
+                contact_title: "Let's talk",
+                contact_sub: "collaborate · build · innovate",
+                footer_text: "built with",
+                toggle_theme: "toggle dark/light"
+            },
+            fr: {
+                nav_about: "À propos",
+                nav_exp: "Exp",
+                nav_work: "Projets",
+                nav_stack: "Stack",
+                nav_pricing: "Tarifs",
+                nav_contact: "Contact",
+                btn_contact: "Me contacter",
+                btn_cv: "CV",
+                hero_name: "Aimen Lalaibia",
+                hero_tagline: "Ingénieur logiciel · mobile & full-stack",
+                hero_desc: "architecture propre · applications haute performance",
+                about_title: "À propos",
+                about_text: "Ingénieur logiciel avec un Master en Génie Logiciel <strong>(major de promotion)</strong>. Expérimenté en développement mobile (Kotlin, Flutter), plateformes web évolutives et architecture propre. Je transforme les problèmes complexes en produits numériques rapides et intuitifs.",
+                exp_title: "Expérience",
+                exp1_title: "Ingénieur logiciel · Dzexpert",
+                exp1_desc: "Amélioration des performances mobiles — chargement 30% plus rapide, nouvelles fonctionnalités augmentant l'engagement.",
+                exp1_date: "2025-2026",
+                exp2_title: "Ingénieur logiciel · Nutri Saha",
+                exp2_desc: "Direction du front-end d'une plateforme multilingue (4 langues), application des principes HCI/UX, livraison sous délais serrés.",
+                exp2_date: "2025",
+                exp3_title: "Stage développement mobile · Shabakett Systems",
+                exp3_desc: "Kotlin & Jetpack Compose, sprints Agile, documentation technique et prototypage de fonctionnalités.",
+                exp3_date: "2024",
+                projects_title: "Projets",
+                proj1_title: "Plateforme Nutri Saha",
+                proj1_desc: "UX multilingue et accessible — entièrement responsive.",
+                proj2_title: "Application de services à domicile",
+                proj2_desc: "Réservation avec MVVM, intégration API, support hors ligne.",
+                proj3_title: "Systèmes d'entreprise",
+                proj3_desc: "Logique métier confidentielle à grande échelle & tableaux de bord.",
+                skills_title: "Technologies",
+                pricing_title: "Services & tarifs",
+                price1_title: "Essentiel · squelette",
+                price1_feat1: "Squelette mobile (1-2 écrans)",
+                price1_feat2: "Page d’accueil / squelette web",
+                price1_feat3: "Wireframes Figma basiques",
+                price1_feat4: "Formulaire de contact",
+                price2_title: "Standard · app + design",
+                price2_feat1: "Application mobile (jusqu’à 5 écrans)",
+                price2_feat2: "Site web multi‑pages",
+                price2_feat3: "Design Figma complet (mobile + web)",
+                price2_feat4: "Intégration API prête",
+                price3_title: "Premium · cycle complet",
+                price3_feat1: "Application mobile complète (iOS/Android)",
+                price3_feat2: "Dashboard web + backend",
+                price3_feat3: "Prototype Figma interactif",
+                price3_feat4: "API complexes & fonctionnalités sur mesure",
+                price3_feat5: "Du squelette à la production",
+                pricing_note: "* Figma inclus uniquement dans les formules Standard et Premium.",
+                contact_title: "Discutons",
+                contact_sub: "collaborer · construire · innover",
+                footer_text: "réalisé avec",
+                toggle_theme: "mode clair/sombre"
+            },
+            ar: {
+                nav_about: "نبذة",
+                nav_exp: "الخبرات",
+                nav_work: "أعمالي",
+                nav_stack: "التقنيات",
+                nav_pricing: "التسعير",
+                nav_contact: "اتصل",
+                btn_contact: "اتصل بي",
+                btn_cv: "السيرة الذاتية",
+                hero_name: "أيمن لعلايبة",
+                hero_tagline: "مهندس برمجيات · تطبيقات الجوال والواجهات",
+                hero_desc: "هندسة نظيفة · تطبيقات عالية الأداء",
+                about_title: "نبذة",
+                about_text: "مهندس برمجيات حاصل على ماجستير في هندسة البرمجيات <strong>(الأول على الدفعة)</strong>. خبرة في تطوير تطبيقات الجوال (Kotlin، Flutter)، والمنصات الويب القابلة للتوسع، والهندسة النظيفة. أحول المشكلات المعقدة إلى منتجات رقمية سريعة وبديهية.",
+                exp_title: "الخبرات",
+                exp1_title: "مهندس برمجيات · Dzexpert",
+                exp1_desc: "تحسين أداء التطبيقات — تحميل أسرع بنسبة 30%، ميزات جديدة عززت التفاعل. توجيه المطورين في الهندسة النظيفة.",
+                exp1_date: "2025-2026",
+                exp2_title: "مهندس برمجيات · Nutri Saha",
+                exp2_desc: "قيادة الواجهة الأمامية لمنصة متعددة اللغات (4 لغات)، تطبيق مبادئ التفاعل الإنساني، التسليم في مواعيد ضيقة.",
+                exp2_date: "2025",
+                exp3_title: "متدرب تطوير جوال · Shabakett Systems",
+                exp3_desc: "Kotlin و Jetpack Compose، سباقات Agile، التوثيق التقني والنماذج الأولية.",
+                exp3_date: "2024",
+                projects_title: "المشاريع",
+                proj1_title: "منصة Nutri Saha",
+                proj1_desc: "تجربة مستخدم متعددة اللغات وسهلة الوصول — متجاوبة بالكامل.",
+                proj2_title: "تطبيق الخدمات المنزلية",
+                proj2_desc: "حجز بنمط MVVM، ربط API، دعم غير متصل.",
+                proj3_title: "أنظمة مؤسسية",
+                proj3_desc: "منطق أعمال سري واسع النطاق ولوحات تحكم (سرية).",
+                skills_title: "مجموعة التقنيات",
+                pricing_title: "الخدمات والتسعير",
+                price1_title: "الأساسي · الهيكل",
+                price1_feat1: "هيكل تطبيق جوال (1-2 شاشة)",
+                price1_feat2: "صفحة هبوط / هيكل ويب",
+                price1_feat3: "إطارات سلكية أساسية (Figma)",
+                price1_feat4: "نموذج اتصال",
+                price2_title: "القياسي · تطبيق + تصميم",
+                price2_feat1: "تطبيق جوال (حتى 5 شاشات)",
+                price2_feat2: "موقع ويب متعدد الصفحات",
+                price2_feat3: "تصميم Figma كامل (جوال + ويب)",
+                price2_feat4: "جاهزية ربط API",
+                price3_title: "بريميوم · دورة كاملة",
+                price3_feat1: "تطبيق جوال كامل (iOS/Android)",
+                price3_feat2: "لوحة تحكم ويب + خلفية",
+                price3_feat3: "نموذج Figma تفاعلي",
+                price3_feat4: "واجهات برمجية معقدة وميزات مخصصة",
+                price3_feat5: "من الهيكل إلى الإنتاج",
+                pricing_note: "* Figma مشمول فقط في الباقات القياسية والممتازة.",
+                contact_title: "لنتحدث",
+                contact_sub: "تعاون · ابتكار · بناء",
+                footer_text: "صُنع بواسطة",
+                toggle_theme: "تبديل الوضع المظلم/الفاتح"
+            }
+        };
+
+        let currentLang = 'en';
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            const dict = translations[lang];
+            if (!dict) return;
+
+            // Update all elements with data-key attribute
+            document.querySelectorAll('[data-key]').forEach(el => {
+                const key = el.getAttribute('data-key');
+                if (dict[key]) {
+                    if (el.innerHTML.includes('<strong>') && key === 'about_text') {
+                        el.innerHTML = dict[key];
+                    } else {
+                        el.innerText = dict[key];
+                    }
+                }
+            });
+
+            // Update HTML lang & direction (RTL for arabic)
+            document.documentElement.lang = lang === 'ar' ? 'ar' : (lang === 'fr' ? 'fr' : 'en');
+            if (lang === 'ar') {
+                document.body.classList.add('rtl');
+                document.body.style.direction = 'rtl';
+            } else {
+                document.body.classList.remove('rtl');
+                document.body.style.direction = 'ltr';
+            }
+
+            // Update button texts
+            const btnContactSpan = document.querySelector('.btn-group .btn:first-child span');
+            if (btnContactSpan && dict.btn_contact) btnContactSpan.innerText = dict.btn_contact;
+            const cvBtnSpan = document.querySelector('.btn-group a[download] span');
+            if (cvBtnSpan && dict.btn_cv) cvBtnSpan.innerText = dict.btn_cv;
+
+            // Update footer text
+            const footerTextSpan = document.querySelector('footer p:first-child span');
+            if (footerTextSpan && dict.footer_text) footerTextSpan.innerText = dict.footer_text;
+
+            const toggleThemeSpan = document.querySelector('footer span.theme');
+            if (toggleThemeSpan && dict.toggle_theme) {
+                toggleThemeSpan.innerHTML = `🌙 <span>${dict.toggle_theme}</span>`;
+            }
+        }
+
+        // Theme toggle
         function toggleTheme() {
             document.body.classList.toggle('dark');
             const toggleBtn = document.getElementById('theme-toggle');
             toggleBtn.innerHTML = document.body.classList.contains('dark') ? '☀️' : '🌙';
         }
 
-        // Intersection Observer for slide/fade animations
+        // Language Dropdown functionality
+        const langDropdown = document.querySelector('.lang-dropdown');
+        const langDropdownBtn = document.getElementById('langDropdownBtn');
+        const langDropdownContent = document.getElementById('langDropdownContent');
+
+        if (langDropdownBtn) {
+            langDropdownBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                langDropdown.classList.toggle('show');
+            });
+        }
+
+        document.addEventListener('click', (e) => {
+            if (langDropdown && !langDropdown.contains(e.target)) {
+                langDropdown.classList.remove('show');
+            }
+        });
+
+        function updateLanguageUI(lang) {
+            const langOptions = document.querySelectorAll('.lang-option');
+            const currentFlagSpan = document.querySelector('.current-flag');
+            const currentLangSpan = document.querySelector('.current-lang');
+
+            if (!currentFlagSpan || !currentLangSpan) return;
+
+            langOptions.forEach(option => {
+                if (option.getAttribute('data-lang') === lang) {
+                    option.classList.add('active-lang');
+                    const flag = option.querySelector('.flag-icon').innerHTML;
+                    currentFlagSpan.innerHTML = flag;
+                    currentLangSpan.innerHTML = lang === 'ar' ? 'AR' : lang.toUpperCase();
+                } else {
+                    option.classList.remove('active-lang');
+                }
+            });
+        }
+
+        // Language option click handlers
+        document.querySelectorAll('.lang-option').forEach(option => {
+            option.addEventListener('click', (e) => {
+                e.preventDefault();
+                const lang = option.getAttribute('data-lang');
+                setLanguage(lang);
+                updateLanguageUI(lang);
+                if (langDropdown) langDropdown.classList.remove('show');
+            });
+        });
+
+        // Intersection Observer for scroll animations
         const faders = document.querySelectorAll('.fade-up, .fade-right, .fade-left');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('appear');
-                    // optional: unobserve after appearing
                     observer.unobserve(entry.target);
                 }
             });
@@ -224,9 +508,12 @@
         });
 
         faders.forEach(el => observer.observe(el));
-
-        // ensure hero already visible (they have .appear forced, but also for safety)
         document.querySelectorAll('.hero .fade-up').forEach(el => el.classList.add('appear'));
+
+        // Initialize
+        setLanguage('en');
+        updateLanguageUI('en');
+        window.toggleTheme = toggleTheme;
     </script>
 </body>
 
